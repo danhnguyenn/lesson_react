@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // // Form
+      // let form = document.createElement('form');
+      // form.className = 'login-frm';
+
+      // // Form Item
+      // let item = document.createElement('div');
+      // item.className = 'login-frm_item';
+
+      // form.appendChild(item);
+
+      // //Label Email
+      // let labelEmail = document.createElement('label');
+      // labelEmail.className = "login-frm__email";
+      // labelEmail.innerHTML = "Email: ";
+      // item.appendChild(labelEmail);
+
+      // //Input Email
+      // let inputEmail = document.createElement('input');
+      // inputEmail.type = 'text';
+      // inputEmail.className = 'login-frm__input';
+      // inputEmail.setAttribute('id','email');
+      // item.appendChild(inputEmail);
+
+      // //Label Password
+      //  let item1 = document.createElement('div');
+      //  item1.className = 'login-frm_item';
+      // let labelPass = document.createElement('label');
+      // labelPass.className = "login-frm__password";
+      // labelPass.innerHTML = "Password";
+      // form.appendChild(item1);
+      // item1.appendChild(labelPass);
+
+      // //Input Password
+      // let inputPass = document.createElement('input');
+      // inputPass.type = 'password';
+      // inputPass.className = 'login-frm__input';
+      // inputPass.setAttribute('id','password');
+      // form.appendChild(item1);
+      // item1.appendChild(inputPass);
+
+      // //Button login
+      // let item3 = document.createElement('div');
+      //  item3.className = 'login-frm_item';
+      // let button = document.createElement('button');
+      // button.className = 'login-frm__submit-btn';
+      // button.type = 'submit';
+      // button.innerText = 'Login';
+      // form.appendChild(item3);
+      // item3.appendChild(button);
+
+      // document.getElementById('root').appendChild(form);
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      //   Không sử dụng JSX
+      //   const form = React.createElement(
+      //     "form",
+      //     {
+      //       class: "login-frm",
+      //     },
+      //     React.createElement(
+      //       "div",
+      //       {
+      //         className: "login-frm__item",
+      //       },
+      //       React.createElement(
+      //         "label",
+      //         {
+      //           htmlFor: "email",
+      //           className: "login-frm__email",
+      //         },
+      //         "Email"
+      //       ),
+      //       React.createElement("input", {
+      //         type: "text",
+      //         className: "login-frm__input",
+      //         id: "email",
+      //       })
+      //     ),
+      //     React.createElement(
+      //       "div",
+      //       {
+      //         className: "login-frm__item",
+      //       },
+      //       React.createElement(
+      //         "label",
+      //         {
+      //           htmlFor: "password",
+      //           className: "login-frm__password",
+      //         },
+      //         "Password"
+      //       ),
+      //       React.createElement("input", {
+      //         type: "password",
+      //         className: "login-frm__input",
+      //         id: "password",
+      //       })
+      //     ),
+      //     React.createElement(
+      //       "div",
+      //       {
+      //         className: "login-frm__item",
+      //       },
+      //       React.createElement(
+      //         "button",
+      //         {
+      //           className: "login-frm__submit-btn",
+      //           type: "submit",
+      //         },
+      //         "Login"
+      //       )
+      //     )
+      //   );
+      const jsx = (
+        <form className="login-frm">
+          <div className="login-frm__item">
+            <label htmlFor="email" className="login-frm__email">
+              Email
+            </label>
+            <input type="text" className="login-frm__input" id="email" />
+          </div>
+          <div className="login-frm__item">
+            <label htmlFor="password" className="login-frm__password">
+              Password
+            </label>
+            <input type="password" className="login-frm__input" id="password" />
+          </div>
+          <div className="login-frm__item">
+            <button className="login-frm__submit-btn" type="submit">
+              Login
+            </button>
+          </div>
+        </form>
+      );
+      root.render(jsx);
+    </script>
+  </body>
+</html>
