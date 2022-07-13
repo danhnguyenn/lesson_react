@@ -9,7 +9,6 @@ class Counter extends React.Component {
     render() {
         return (
             <div className="counter">
-                <h2 style={{color: "var(--red)", fontSize: "1.2em"}}>{this.props.heading}</h2>
                 <Num start={this.props.start}/>
                 <div className="counter__actions">
                     <button className="btn btn--yellow" onClick={this.hello}>Xin chào</button>
